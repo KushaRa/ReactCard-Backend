@@ -1,18 +1,14 @@
 const express = require("express");
 const cors = require('cors');
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 const data_product = require("./data");
 
 app.use(cors()); // Allow requests from any origin
 
+// Define the route to serve data
 app.get("/displayData", (req, res) => {
-  res.header("Access-Control-Allow-Origin", "*"); // Set the allowed origin
-  res.json({ data_product });
-});
-
-app.get("/displayData", (req, res) => {
-  res.json({ data_product });
+  res.json(data_product); // Send data_product directly
 });
 
 // Start the server
