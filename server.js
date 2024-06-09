@@ -24,7 +24,6 @@ app.post('/submit-add',async(req,res)=>
   try {
     await newTutorial.save(); 
     res.status(200).send('Tutorial submitted successfully!'); 
-    res.status(500).send('Error submitting tutorial.'); 
   } catch (err) {
     res.status(500).send('Error submitting tutorial.'); // Handle errors and send an error response
   }
