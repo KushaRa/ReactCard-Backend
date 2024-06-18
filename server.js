@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const advertisementRoutes = require('./routes/advertisementRoutes');
+const advertisementRoutes = require('./routes/advertismentRoutes');
 const data_product = require('./data');
 
 const app = express();
@@ -11,7 +11,7 @@ const port = process.env.PORT || 4000;
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb+srv://kushana:Izn5o0iC865jB8yg@cluster0.erqc8h4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
+mongoose.connect('mongodb+srv://kushana:Izn5o0iC865jB8yg@cluster0.erqc8h4.mongodb.net/ReactCardInternX?retryWrites=true&w=majority&appName=Cluster0', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
