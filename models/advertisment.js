@@ -2,11 +2,6 @@ const mongoose=require('mongoose');
 
 const advertisementSchema= new mongoose.Schema(
     {
-        id:{
-            type: Number,
-            required: true,
-            unique: true
-        } ,
         company_name: {
             type: String,
             required: true
