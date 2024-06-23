@@ -11,3 +11,12 @@ exports.submitAdvertisement = async (req, res) => {
     res.status(500).send('Error submitting post.');
   }
 };
+exports.displayAdvetisements = async(req, res) =>{
+  try{
+    const adds = await Advertisement.find();
+    res.json(adds);
+  }
+  catch(err){
+    res.status(500).json({message:err.message});
+  }
+};
