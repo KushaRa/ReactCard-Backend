@@ -10,10 +10,7 @@ const port = process.env.PORT || 4000;
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb+srv://kushana:Izn5o0iC865jB8yg@cluster0.erqc8h4.mongodb.net/ReactCardInternX?retryWrites=true&w=majority&appName=Cluster0', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
+mongoose.connect('mongodb+srv://kushana:Izn5o0iC865jB8yg@cluster0.erqc8h4.mongodb.net/ReactCardInternX?retryWrites=true&w=majority&appName=Cluster0')
 .then(() => console.log('Connected to MongoDB'))
 .catch(err => console.error('Could not connect to MongoDB', err));
 

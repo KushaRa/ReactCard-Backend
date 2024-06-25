@@ -1,7 +1,7 @@
 const mongoose=require('mongoose');
 
 const advertisementSchema= new mongoose.Schema(
-    {
+    {  
         company_name: {
             type: String,
             required: true
